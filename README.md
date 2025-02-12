@@ -8,6 +8,8 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
+Using ruby version 3.3.7
+
 gem "educhain_view_components"
 ```
 
