@@ -1,8 +1,9 @@
 # Educhain::ViewComponents
-Short description and motivation.
+Components for building interfaces on Hotwire & ViewCompon ent
 
 ## Usage
-How to use my plugin.
+Dummy app located at `demo` folder
+Previews for Lookup located at `previews` folder
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -24,7 +25,7 @@ $ gem install educhain_view_components
 ```
 
 ## Contributing
-Contribution directions go here.
+Contribution directions go [here](CONTRIBUTING.md).
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
