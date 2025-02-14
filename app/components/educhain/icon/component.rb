@@ -11,6 +11,8 @@ class Educhain::Icon::Component < Educhain::BaseComponent
   def call
     tabler_icon(@name, size: @size, color: @color, stroke_width: @stroke_width)
   rescue
-    content_tag("div", "Не удалось загрузить иконку")
+    content_tag("div", class: "wrong-icon") do
+      content_tag("div", "X", class: "wrong-icon-text")
+    end
   end
 end

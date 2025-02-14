@@ -17,3 +17,5 @@ gem "rubocop-rails-omakase", require: false
 gem "lookbook"
 
 gem "tabler_icons_ruby"
+
+gem "tailwindcss-rails"

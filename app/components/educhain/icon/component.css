@@ -1,0 +1,8 @@
+@layer components {
+  .wrong-icon{
+    @apply border h-[30px] w-[30px];    
+  }
+  .wrong-icon-text{
+    @apply text-red-500 font-semibold text-center;    
+  }
+}
