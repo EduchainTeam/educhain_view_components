@@ -3,7 +3,6 @@ PATH
   specs:
     educhain_view_components (0.1.0)
       rails (>= 7.2.2.1)
-      tabler_icons_ruby
       tailwindcss-rails
 
 GEM
@@ -244,8 +243,6 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (2.5.0-x86_64-linux-gnu)
     stringio (3.1.2)
-    tabler_icons_ruby (3.26.0)
-      nokogiri
     tailwindcss-rails (4.0.0)
       railties (>= 7.0.0)
       tailwindcss-ruby (~> 4.0)
@@ -279,7 +276,6 @@ DEPENDENCIES
   rubocop-rails-omakase
   sprockets-rails
   sqlite3
-  tabler_icons_ruby
   tailwindcss-rails
 
 BUNDLED WITH
