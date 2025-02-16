@@ -8,7 +8,7 @@ class Educhain::Icon::Component < Educhain::BaseComponent
   # @param name [String] the name of the icon
   # @option attrs [String] :class the class to add to the svg
   # @see https://remixicon.com/
-  def initialize(name: "account-box-fill", **attrs)
+  def initialize(name:, **attrs)
     raise ArgumentError, "unkown icon #{name.inspect}" unless NAMES.include?(name.to_s)
 
     @name = name
