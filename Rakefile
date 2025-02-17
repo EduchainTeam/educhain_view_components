@@ -6,3 +6,27 @@ load "rails/tasks/engine.rake"
 load "rails/tasks/statistics.rake"
 
 require "bundler/gem_tasks"
+
+namespace :tailwindcss do
+  tailwindcss_command = [
+    "tailwindcss",
+    "--content",
+    "#{__dir__}/{app/helpers,app/views,app/components,app/assets/javascripts,previews}/**/*",
+    "--config",
+    "#{__dir__}/config/tailwind.config.js",
+    "--input",
+    "#{__dir__}/app/assets/stylesheets/application.tailwind.css",
+    "--output",
+    "#{__dir__}/app/assets/builds/educhain_view_components.css",
+  ]
+
+  desc 'Build Tailwind CSS'
+  task :build do
+    sh tailwindcss_command.shelljoin
+  end
+
+  desc 'Watch Tailwind CSS'
+  task :watch do
+    sh (tailwindcss_command + ['--watch']).shelljoin
+  end
+end

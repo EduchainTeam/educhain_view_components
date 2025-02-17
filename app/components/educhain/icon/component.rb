@@ -23,9 +23,7 @@ class Educhain::Icon::Component < Educhain::BaseComponent
   end
 
   def call
-    # bypass the asset_host configuration to avoid CORS issues with CDNs:
-    # https://github.com/solidusio/solidus/issues/5657
-    href = asset_path("solidus_admin/remixicon.symbol.svg#ri-#{@name}", host: "")
+    href = asset_path("educhain/view_components/remixicon.symbol.svg#ri-#{@name}", host: "")
     tag.svg(tag.use("xlink:href": href), **@attrs)
   end
 end

@@ -282,6 +282,7 @@ DEPENDENCIES
   rubocop-rails-omakase
   sprockets-rails
   sqlite3
+  tailwindcss-rails
 
 BUNDLED WITH
    2.6.3
