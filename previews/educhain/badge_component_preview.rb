@@ -10,16 +10,16 @@ class Educhain::BadgeComponentPreview < ViewComponent::Preview
   # @param color select :color_options
   # @param size select :size_options
   def playground(name: "Label", color: :green, size: :m)
-    render current_component.new(name:, color:, size:)
+    render Educhain::Badge::Component.new(name:, color:, size:)
   end
 
   private
 
   def size_options
-    current_component::SIZES.keys
+    Educhain::Badge::Component::SIZES.keys
   end
 
   def color_options
-    current_component::COLORS.keys
+    Educhain::Badge::Component::COLORS.keys
   end
 end
