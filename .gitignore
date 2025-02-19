@@ -8,4 +8,4 @@
 /demo/log/*.log
 /demo/storage/
 /demo/tmp/
-educhain_view_components.css
+/app/assets/builds/educhain_view_components.css
