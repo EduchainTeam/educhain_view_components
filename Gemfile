@@ -16,4 +16,4 @@ gem "rubocop-rails-omakase", require: false
 # gem "debug", ">= 1.0.0"
 gem "lookbook"
 
-gem "tailwindcss-rails"
+gem "tailwindcss-rails", "~> 3.3"

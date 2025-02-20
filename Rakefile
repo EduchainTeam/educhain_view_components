@@ -10,8 +10,6 @@ require "bundler/gem_tasks"
 namespace :tailwindcss do
   tailwindcss_command = [
     "tailwindcss",
-    "--content",
-    "#{__dir__}/{app/helpers,app/views,app/components,app/assets/javascripts,previews}/**/*",
     "--config",
     "#{__dir__}/config/tailwind.config.js",
     "--input",
