@@ -1,5 +1,6 @@
 require "view_component"
 require "view_component/version"
+require "importmap-rails"
 
 module Educhain
   module ViewComponents
@@ -12,6 +13,11 @@ module Educhain
 
       initializer "educhain-view-components.assets" do |app|
         app.config.assets.precompile += %w[educhain_view_components_manifest]
+      end
+
+      initializer "educhain-view-components.importmap", before: "importmap" do |app|
+        app.config.importmap.paths << root.join("config/importmap.rb")
+        app.config.importmap.cache_sweepers << root.join("app/assets/javascripts")      
       end
     end
   end

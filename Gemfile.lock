@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     educhain_view_components (0.1.0)
+      importmap-rails (~> 1.2, >= 1.2.1)
       rails (>= 7.2.2.1)
       tailwindcss-rails (~> 3.3)
       view_component (~> 3.0)
@@ -101,6 +102,10 @@ GEM
     htmlentities (4.3.4)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    importmap-rails (1.2.3)
+      actionpack (>= 6.0.0)
+      activesupport (>= 6.0.0)
+      railties (>= 6.0.0)
     io-console (0.8.0)
     irb (1.15.1)
       pp (>= 0.6.0)
@@ -277,6 +282,7 @@ PLATFORMS
 
 DEPENDENCIES
   educhain_view_components!
+  importmap-rails (~> 1.2, >= 1.2.1)
   lookbook
   puma
   rubocop-rails-omakase
