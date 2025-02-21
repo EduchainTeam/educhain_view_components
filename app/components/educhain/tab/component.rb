@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-class Educhain::Badge::Tab::Component < Educhain::BaseComponent
+class Educhain::Tab::Component < Educhain::BaseComponent
     SIZES = {
       s: %w[h-7 px-1.5 font-semibold text-sm],
       m: %w[h-9 px-3 font-semibold text-sm],
       l: %w[h-12 px-4 font-semibold text-base],
     }
   
-    def initialize(text:, tag: :a, size: :m, current: false, disabled: false, **attributes)
+    def initialize(text: "", tag: :a, size: :m, current: false, disabled: false, **attributes)
       @tag = tag
       @text = text
       @size = size
