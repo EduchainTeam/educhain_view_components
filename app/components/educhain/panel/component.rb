@@ -37,4 +37,8 @@ class Educhain::Panel::Component < Educhain::BaseComponent
       #{args[:class]}
     ", &block)
   end
+  # Generate a unique stimulus_id for the component
+  def stimulus_id
+    @stimulus_id ||= "panel-#{object_id}"
+  end
 end
