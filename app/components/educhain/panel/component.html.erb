@@ -25,7 +25,7 @@
     <%= render_section do %>
       <h2>
         <span class="font-semibold text-base"><%= @title %></span>
-        <%= render Educhain::Panel::Component("ui/toggletip").new(text: @title_hint) if @title_hint %>
+        <%= render component("ui/toggletip").new(text: @title_hint) if @title_hint %>
       </h2>
     <% end %>
   <% end %>
