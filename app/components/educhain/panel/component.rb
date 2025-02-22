@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 class Educhain::Panel::Component < Educhain::BaseComponent
+   # Define the icon_tag method
+   def icon_tag(icon_name, options = {})
+   # Example implementation using FontAwesome
+   content_tag(:i, "", class: "fa fa-#{icon_name} #{options[:class]}")
+   end
   renders_one :action, ->(name:, href:, icon: 'add-box-fill', **args) {
     link_to(
       icon_tag(icon, class: 'w-[1.4em] h-[1.4em]') + name,
