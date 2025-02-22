@@ -17,7 +17,14 @@ module Educhain
 
       initializer "educhain-view-components.importmap", before: "importmap" do |app|
         app.config.importmap.paths << root.join("config/importmap.rb")
-        app.config.importmap.cache_sweepers << root.join("app/assets/javascripts")      
+        app.config.importmap.cache_sweepers << root.join("app/javascript")      
+      end
+
+      initializer "educhain_view_components.importmap.assets" do |app|
+        app.config.assets.paths += [
+          Educhain::ViewComponents::Engine.root.join("app/javascript"),
+          Educhain::ViewComponents::Engine.root.join("app/components"),
+        ]
       end
     end
   end
