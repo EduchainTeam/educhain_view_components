@@ -16,8 +16,6 @@ class Educhain::Badge::Component < Educhain::BaseComponent
     l: "px-3 py-0.5 text-base font-semibold"
   }.freeze
 
-  renders_one :tab, Educhain::Tab::Component
-  
   def initialize(name:, color: :graphite_light, size: :m)
     @name = name
 
