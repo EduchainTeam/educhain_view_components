@@ -14,12 +14,13 @@
   "
   data-controller="<%= stimulus_id %>"
 >
-  <% if menus? %>
-    <%= render component('ui/dropdown').new(
+# TODO need to add dropdown component
+  <%# if menus? %>
+    <%#= render component('ui/dropdown').new(
       size: :s,
       class: "absolute top-0 right-0 m-6",
     ).with_content(safe_join(menus)) %>
-  <% end %>
+  <%# end %>
 
   <% if @title %>
     <%= render_section do %>
