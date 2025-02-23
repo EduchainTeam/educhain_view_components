@@ -107,9 +107,9 @@ class Educhain::Input::Component < Educhain::BaseComponent
 
   def tag_options
     @tag_options ||= {
-      # "data-controller": stimulus_id,
-      # "data-#{stimulus_id}-custom-validity-value": @error.presence,
-      # "data-action": "#{stimulus_id}#clearCustomValidity",
+      "data-controller": stimulus_id,
+      "data-#{stimulus_id}-custom-validity-value": @error.presence,
+      "data-action": "#{stimulus_id}#clearCustomValidity",
       **@attributes
     }
   end
