@@ -23,5 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", ">= 7.2.2.1"
   spec.add_dependency "view_component", "~> 3.0"
-  spec.add_dependency "tailwindcss-rails"
+  spec.add_dependency "tailwindcss-rails", "~> 3.3"
+  spec.add_dependency 'importmap-rails', '~> 1.2', '>= 1.2.1'
+  spec.add_dependency 'stimulus-rails'
 end
