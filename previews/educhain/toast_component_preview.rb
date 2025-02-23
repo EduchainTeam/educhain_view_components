@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# @component "ui/toast"
 class Educhain::Toast::ComponentPreview < ViewComponent::Preview
   def overview
     render_with_template
