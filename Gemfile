@@ -18,6 +18,6 @@ gem "lookbook"
 
 gem "tailwindcss-rails", "~> 3.3"
 
-gem "importmap-rails", "~> 1.2", ">= 1.2.1"
+gem "importmap-rails", "~> 2.1"
 
 gem 'stimulus-rails'
