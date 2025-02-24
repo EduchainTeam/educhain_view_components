@@ -1,0 +1,87 @@
+<div class="p-4 space-y-8">
+  <div>
+    <h3 class="text-lg font-medium mb-4">Fields types</h3>
+    <div class="space-y-4">
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Text field</p>
+        <%= render Educhain::Input::Component.new(type: :text, placeholder: "Enter text") %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Password field</p>
+        <%= render Educhain::Input::Component.new(type: :password, placeholder: "Enter password") %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Number field</p>
+        <%= render Educhain::Input::Component.new(type: :number, placeholder: "0") %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Email field</p>
+        <%= render Educhain::Input::Component.new(type: :email, placeholder: "email@example.com") %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Textarea</p>
+        <%= render Educhain::Input::Component.new(tag: :textarea, placeholder: "Enter text") %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Select</p>
+        <%= render Educhain::Input::Component.new(
+          tag: :select,
+          choices: [["Option 1", 1], ["Option 2", 2], ["Option 3", 3]]
+        ) %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Multiselect</p>
+        <%= render Educhain::Input::Component.new(
+          tag: :select,
+          multiple: true,
+          choices: [["Option 1", 1], ["Option 2", 2], ["Option 3", 3]]
+        ) %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Field with error</p>
+        <%= render Educhain::Input::Component.new(
+          type: :text,
+          error: "This field contains an error",
+          "aria-invalid": true,
+          placeholder: "Field with error"
+        ) %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Disabled field</p>
+        <%= render Educhain::Input::Component.new(
+          type: :text,
+          disabled: true,
+          value: "Disabled field"
+        ) %>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="text-lg font-medium mb-4">Sizes</h3>
+    <div class="space-y-4">
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Small (s)</p>
+        <%= render Educhain::Input::Component.new(size: :s, placeholder: "size: :s") %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Medium (m)</p>
+        <%= render Educhain::Input::Component.new(size: :m, placeholder: "size: :m") %>
+      </div>
+
+      <div>
+        <p class="text-sm text-gray-500 mb-2">Large (l)</p>
+        <%= render Educhain::Input::Component.new(size: :l, placeholder: "size: :l") %>
+      </div>
+    </div>
+  </div>
+</div> 

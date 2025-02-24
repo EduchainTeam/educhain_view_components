@@ -15,3 +15,9 @@ gem "rubocop-rails-omakase", require: false
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem "debug", ">= 1.0.0"
 gem "lookbook"
+
+gem "tailwindcss-rails", "~> 3.3"
+
+gem "importmap-rails", "~> 1.2", ">= 1.2.1"
+
+gem 'stimulus-rails'
