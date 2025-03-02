@@ -21,6 +21,6 @@ class Educhain::ToggletipComponentPreview < ViewComponent::Preview
     private
   
     def position_options
-      current_component::POSITIONS.keys
+      Educhain::Toggletip::Component::POSITIONS.keys
     end
   end
