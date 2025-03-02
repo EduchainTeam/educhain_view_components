@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Educhain::DropdownComponentPreview < ViewComponent::Preview
+class Educhain::DropdownComponentPreview < Educhain::BasePreview
   def overview
     render_with_template
   end
@@ -10,7 +10,7 @@ class Educhain::DropdownComponentPreview < ViewComponent::Preview
   # @param direction select { choices: [left, right] }
   # @param open toggle
   def playground(text: "text", size: :m, direction: :right, open: false)
-    render Educhain::Dropdown::Component.new(
+    render component("dropdown",
       text:,
       size: size.to_sym,
       direction: direction.to_sym,

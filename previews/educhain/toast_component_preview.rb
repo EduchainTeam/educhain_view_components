@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Educhain::ToastComponentPreview < ViewComponent::Preview
+class Educhain::ToastComponentPreview < Educhain::BasePreview
   def overview
     render_with_template
   end
@@ -9,6 +9,6 @@ class Educhain::ToastComponentPreview < ViewComponent::Preview
   # @param text text
   # @param icon text
   def playground(text: "Toast", scheme: :default, icon: "checkbox-circle-fill")
-    render Educhain::Toast::Component.new(text:, scheme:, icon:)
+    render component("toast", text:, scheme:, icon:)
   end
 end

@@ -3,7 +3,7 @@
     More icon, direction right
   </h6>
 
-  <%= render Educhain::Dropdown::Component.new(direction: :right) do %>
+  <%= render component("dropdown", direction: :right) do %>
     <%= link_to "Link 1", "#" %>
     <%= link_to "Link 2", "#" %>
     <%= link_to "Link 3", "#" %>
@@ -16,7 +16,7 @@
     With text, direction right
   </h6>
 
-  <%= render Educhain::Dropdown::Component.new(direction: :right, text: "Select address") do %>
+  <%= render component("dropdown", direction: :right, text: "Select address") do %>
     <%= link_to "Address 1", "#" %>
     <%= link_to "Address 2", "#" %>
     <%= link_to "Address 3", "#" %>
@@ -29,7 +29,7 @@
     Small size, long content
   </h6>
 
-  <%= render Educhain::Dropdown::Component.new(direction: :right, size: :s) do %>
+  <%= render component("dropdown", direction: :right, size: :s) do %>
     <%= link_to "Address 1 Address 2 Address 3 Address 4", "#" %>
   <% end %>
 </div>
