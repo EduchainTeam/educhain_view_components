@@ -1,0 +1,47 @@
+<div class="flex gap-4">
+  <div class="mb-8">
+    <h6 class="text-gray-500 mb-3 mt-0">
+      Empty
+    </h6>
+    <% Educhain::Thumbnail::Component::SIZES.keys.each do |size| %>
+      (size: <%= size.inspect %>)
+      <%= render Educhain::Thumbnail::Component.new(size: size) %>
+    <% end %>
+  </div>
+
+  <div class="mb-8">
+    <h6 class="text-gray-500 mb-3 mt-0">
+      Square
+    </h6>
+
+    <% Educhain::Thumbnail::Component::SIZES.keys.each do |size| %>
+      (size: <%= size.inspect %>)
+      <%= render Educhain::Thumbnail::Component.new(size: size, src: "https://img.freepik.com/free-vector/charity-logo-hands-supporting-heart-icon-flat-design-vector-illustration_53876-136266.jpg") %>
+      <%= render Educhain::Thumbnail::Component.new(size: size, src: "https://img.freepik.com/premium-vector/love-vector-black-heart-shape-frame-with-crown-brush-icon-doodle-hand-drawn-valentine-day_81863-12202.jpg") %>
+    <% end %>
+  </div>
+
+  <div class="mb-8">
+    <h6 class="text-gray-500 mb-3 mt-0">
+      Portrait
+    </h6>
+
+    <% Educhain::Thumbnail::Component::SIZES.keys.each do |size| %>
+      (size: <%= size.inspect %>)
+      <%= render Educhain::Thumbnail::Component.new(size: size, src: "https://img.freepik.com/free-vector/flat-medical-symbol_23-2149496593.jpg") %>
+      <%= render Educhain::Thumbnail::Component.new(size: size, src: "https://img.freepik.com/free-vector/green-cross-geometric-shape-vector_53876-168849.jpg") %>
+    <% end %>
+  </div>
+
+  <div class="mb-8">
+    <h6 class="text-gray-500 mb-3 mt-0">
+      Landscape
+    </h6>
+
+    <% Educhain::Thumbnail::Component::SIZES.keys.each do |size| %>
+      (size: <%= size.inspect %>)
+      <%= render Educhain::Thumbnail::Component.new(size: size, src: "https://img.freepik.com/premium-photo/mayan-calendar-showcasing-intricate-symbols_913287-2047.jpg") %>
+      <%= render Educhain::Thumbnail::Component.new(size: size, src: "https://img.freepik.com/free-vector/mayan-civilization-mask-illustration_1284-63470.jpg") %>
+    <% end %>
+  </div>
+</div>
