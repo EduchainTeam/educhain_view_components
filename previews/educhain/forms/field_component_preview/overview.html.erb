@@ -3,12 +3,11 @@
     With just the label
   </h6>
 
-<% "# TODO need to add forms/input component" %>
-  <%#= render Educhain::Forms::Field::Component.new(
+  <%= render Educhain::Forms::Field::Component.new(
     label: "Greeting",
   ) do %>
-    <%#= render component('ui/forms/input').new(value: "Hello world!") %>
-  <%# end %>
+    <%= render Educhain::Forms::Input::Component.new(value: "Hello world!") %>
+  <% end %>
 </div>
 <div class="mb-8">
   <h6 class="text-gray-500 mb-3 mt-0">
@@ -16,13 +15,12 @@
     tip and error
   </h6>
 
-  <% "# TODO need to add forms/input component" %>
-  <%#= render Educhain::Forms::Field::Component.new(
+  <%= render Educhain::Forms::Field::Component.new(
     label: "Greeting",
     hint: "A brief explanation",
     tip: "More in-detail information about this filed",
     error: "The second letter should be lowecase",
   ) do %>
-    <%#= render component('ui/forms/input').new(value: "HEllo world!", error: "The second letter should be lowecase") %>
-  <%# end %>
+    <%= render Educhain::Forms::Input::Component.new(value: "HEllo world!", error: "The second letter should be lowecase") %>
+  <% end %>
 </div>
