@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Educhain::Input::Component < Educhain::BaseComponent
+class Educhain::Forms::Input::Component < Educhain::BaseComponent
   SIZES = {
     s: "form-control-sm px-3 py-1.5 font-normal text-sm",
     m: "form-control-md px-3 py-1.5 font-normal text-sm",
