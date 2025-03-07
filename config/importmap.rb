@@ -6,5 +6,6 @@ pin "sortablejs", to: "https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/+esm"
 pin "@rails/request.js", to: "https://cdn.jsdelivr.net/npm/@rails/request.js@0.0.9/+esm"
 
 pin "educhain_view_components/application"
+pin "educhain_view_components/utils"
 pin_all_from Educhain::ViewComponents::Engine.root.join("app/javascript/educhain_view_components/controllers"), under: "educhain_view_components/controllers"
 pin_all_from Educhain::ViewComponents::Engine.root.join("app/components")

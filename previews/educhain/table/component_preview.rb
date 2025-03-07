@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# @component "ui/table"
 class Educhain::Table::ComponentPreview < ViewComponent::Preview
 
   # @param search_bar toggle
@@ -28,10 +27,10 @@ class Educhain::Table::ComponentPreview < ViewComponent::Preview
 
   def table_data(batch_actions, sortable)
     columns = [
-      { header: :id, data: -> { "#{_1.to_s}_1.id.to_s" } },
-      { header: :name, data: ":name" },
-      { header: -> { "Availability at #{Time.current}" }, data: -> { "#{_1.to_s} ago" } },
-      { header: -> { Educhain::Badge::Component.new(name: "$$$") }, data: -> { Educhain::Badge::Component.new(name: _1.to_s, color: :green) } },
+      { header: :id, data: -> { _1.id.to_s } },
+      { header: :name, data: :name },
+      { header: -> { "Availability at #{Time.current}" }, data: -> { "#{ _1.available_on} ago" } },
+      { header: -> { Educhain::Badge::Component.new(name: "$$$") }, data: -> { Educhain::Badge::Component.new(name: _1.price, color: :green) } },
       { header: "Generated at", data: Time.current.to_s },
     ]
 
@@ -42,8 +41,8 @@ class Educhain::Table::ComponentPreview < ViewComponent::Preview
       })
     end
     {
-      class: Class,
-      rows: Array.new(10) { |n| "Element #{n}" },
+      class: ExampleProduct,
+      rows: Array.new(10) { |n| ExampleProduct.new(id: n, name: "Product #{n}", price: (n + 13) * 10.0, available_on: n.days.ago) },
       columns:,
       prev: nil,
       next: '#2',
@@ -94,7 +93,7 @@ class Educhain::Table::ComponentPreview < ViewComponent::Preview
   def filter_options
     [
       {
-        presentation: "Filter",
+        label: "Filter",
         combinator: 'or',
         attribute: "attribute",
         predicate: "eq",
@@ -112,5 +111,14 @@ class Educhain::Table::ComponentPreview < ViewComponent::Preview
     }
     options[:handle] = '.handle' if sortable == "handle"
     options
+  end
+  class ExampleProduct
+    attr_reader :id, :name, :price, :available_on
+    def initialize(id:, name:, price:, available_on:)
+      @id = id
+      @name = name
+      @price = price
+      @available_on = available_on
+    end
   end
 end
