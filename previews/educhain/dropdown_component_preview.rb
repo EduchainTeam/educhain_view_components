@@ -2,7 +2,7 @@
 
 class Educhain::DropdownComponentPreview < Educhain::BasePreview
   def overview
-    render_with_template
+    render_with_template(locals: { current_component: current_component })
   end
 
   # @param text text
@@ -10,7 +10,7 @@ class Educhain::DropdownComponentPreview < Educhain::BasePreview
   # @param direction select { choices: [left, right] }
   # @param open toggle
   def playground(text: "text", size: :m, direction: :right, open: false)
-    render component("dropdown",
+    render current_component.new(
       text:,
       size: size.to_sym,
       direction: direction.to_sym,
