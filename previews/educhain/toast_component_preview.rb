@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Educhain::ToastComponentPreview < Educhain::BasePreview
+class Educhain::ToastComponentPreview < BasePreview
   def overview
     render_with_template(locals: { current_component: current_component })
   end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Educhain::DropdownComponentPreview < Educhain::BasePreview
+class Educhain::DropdownComponentPreview < BasePreview
   def overview
     render_with_template(locals: { current_component: current_component })
   end
