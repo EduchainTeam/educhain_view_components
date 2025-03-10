@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-class Educhain::BadgeComponentPreview < BasePreview
+class Educhain::BadgeComponentPreview < ViewComponent::Preview
+  include Educhain::Preview
   # @param name text
   def overview(name: "Label")
     render_with_template(locals: { current_component: current_component, name: })
