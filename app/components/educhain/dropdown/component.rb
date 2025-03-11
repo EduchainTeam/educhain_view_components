@@ -22,6 +22,7 @@ class Educhain::Dropdown::Component < Educhain::BaseComponent
     @attributes[:class] = "
       font-normal
       #{@size == :m ? 'text-base' : 'text-sm'}
+      #{DIRECTIONS[@direction]}
       #{@attributes[:class]}
     "
   end
