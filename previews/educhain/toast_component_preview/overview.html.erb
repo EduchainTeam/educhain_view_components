@@ -3,7 +3,7 @@
     Default
   </h6>
 
-  <%= render Educhain::Toast::Component.new(scheme: :default, text: 'Product Saved', icon: 'checkbox-circle-fill') %>
+  <%= render current_component.new(scheme: :default, text: 'Product Saved', icon: 'checkbox-circle-fill') %>
 </div>
 
 <div class="mb-8">
@@ -11,5 +11,5 @@
     Error
   </h6>
 
-  <%= render Educhain::Toast::Component.new(scheme: :error, text: 'Server Error', icon: 'error-warning-fill') %>
+  <%= render current_component.new(scheme: :error, text: 'Server Error', icon: 'error-warning-fill') %>
 </div>
