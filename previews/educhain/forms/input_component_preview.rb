@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Educhain::InputComponentPreview < ViewComponent::Preview
+class Educhain::Forms::InputComponentPreview < ViewComponent::Preview
    
   def overview
     render_with_template
@@ -9,7 +9,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
   # @param size select {choices: [s, m, l]}
   # @param placeholder text
   def text_input(size: :m, placeholder: "Enter text")
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       type: :text,
       size: size.to_sym,
       placeholder: placeholder
@@ -18,7 +18,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
   
   # @param size select {choices: [s, m, l]}
   def password_input(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       type: :password,
       size: size.to_sym,
       placeholder: "Enter password"
@@ -27,7 +27,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
 
   # @param size select {choices: [s, m, l]}
   def number_input(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       type: :number,
       size: size.to_sym,
       placeholder: "0"
@@ -36,7 +36,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
 
   # @param size select {choices: [s, m, l]}
   def email_input(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       type: :email,
       size: size.to_sym,
       placeholder: "email@example.com"
@@ -45,7 +45,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
 
   # @param size select {choices: [s, m, l]}
   def textarea(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       tag: :textarea,
       size: size.to_sym,
       placeholder: "Enter text"
@@ -54,7 +54,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
 
   # @param size select {choices: [s, m, l]} 
   def select(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       tag: :select,
       size: size.to_sym,      
       choices: [["Option 1", 1],
@@ -64,7 +64,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
 
   # @param size select {choices: [s, m, l]} 
   def select_multiple(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       tag: :select,
       size: size.to_sym,
       multiple: true,
@@ -75,7 +75,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
 
   # @param size select {choices: [s, m, l]}
   def disabled(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       type: :text,
       size: size.to_sym,
       disabled: true,
@@ -85,7 +85,7 @@ class Educhain::InputComponentPreview < ViewComponent::Preview
 
   # @param size select {choices: [s, m, l]}
   def field_with_error(size: :m)
-    render(Educhain::Input::Component.new(
+    render(Educhain::Forms::Input::Component.new(
       type: :text,
       size: size.to_sym,
       "aria-invalid": true,

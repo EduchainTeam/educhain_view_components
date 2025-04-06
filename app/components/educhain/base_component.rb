@@ -2,6 +2,7 @@
 
 module Educhain
   class BaseComponent < ViewComponent::Base
+    include Educhain::ViewComponents::ComponentsHelper
     include Educhain::ViewComponents::VoidElementsHelper
 
     def icon_tag(name, **attrs)
