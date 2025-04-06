@@ -19,7 +19,6 @@ module.exports = {
         current: "currentColor",
 
         // Primary palette
-        "solidus-red": "#ef3023",
         black: "#222222",
         graphite: "#c7ccc7",
         "graphite-light": "#d8dad8",

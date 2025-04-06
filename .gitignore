@@ -10,4 +10,5 @@
 /demo/tmp/
 /app/assets/builds/educhain_view_components.css
 .DS_Store
+.idea/
 .byebug_history

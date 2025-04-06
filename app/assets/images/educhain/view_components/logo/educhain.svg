@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="117"
+   height="25"
+   viewBox="0 0 30.95625 6.6145827"
+   version="1.1"
+   id="svg921"
+   inkscape:export-filename="/home/uri/Training/4_Eduhcain/лого/logo_educhain_336_80.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   sodipodi:docname="educhain_120_25.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview923"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="3.1345226"
+     inkscape:cx="133.67267"
+     inkscape:cy="67.633903"
+     inkscape:window-width="1528"
+     inkscape:window-height="836"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs918" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       class="st0"
+       d="M 0.07678538,3.0394921 1.991076,4.0044895 V 6.210337 L 0.07678538,5.2453478 Z M 2.7728159,0.43541127 5.1369657,1.6345573 2.7728159,2.8337035 0.40866516,1.6345573 Z M 2.7387471,2.9638501 c 0.3930745,0 0.7117042,0.2808783 0.7117042,0.6273908 0,0.3465027 -0.3186297,0.6273809 -0.7117042,0.6273809 -0.3930855,0 -0.7117046,-0.2808782 -0.7117046,-0.6273809 0,-0.3465125 0.3186191,-0.6273908 0.7117046,-0.6273908 z M 2.5015155,3.0967816 c -0.1249334,0 -0.2265146,0.089526 -0.2265146,0.1996771 0,0.1101212 0.1015597,0.1996672 0.2265146,0.1996672 0.1249119,0 0.2265041,-0.089527 0.2265041,-0.1996672 0,-0.1101316 -0.1009127,-0.1996771 -0.2265041,-0.1996771 z M 5.4776759,3.0394731 3.5633958,4.0044705 V 6.2103179 L 5.4776759,5.2453291 Z"
+       id="path16"
+       style="clip-rule:evenodd;display:inline;fill:#d04242;fill-opacity:1;fill-rule:evenodd;stroke-width:0.139983"
+       inkscape:export-filename="/home/uri/Training/4_Eduhcain/лого/header.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.64444px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="7.8055687"
+       y="5.2357759"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:5.64444px;font-family:Diavlo;-inkscape-font-specification:'Diavlo Medium';stroke-width:0.264583"
+         x="7.8055687"
+         y="5.2357759">Educhain</tspan></text>
+  </g>
+</svg>
