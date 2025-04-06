@@ -2,9 +2,9 @@
 
 class Educhain::Navigation::Component < Educhain::BaseComponent
   def initialize(
-    # :logo_path, :string, default: "logo/solidus.svg"
+    # :logo_path, :string, default: "logo/educhain.svg"
 
-    logo_path: "educhain/view_components/logo/solidus.svg",
+    logo_path: "educhain/view_components/logo/educhain.svg",
 
     # items: default items set in navigation
 
