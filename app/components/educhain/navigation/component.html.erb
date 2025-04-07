@@ -11,4 +11,8 @@
   <ul class="flex flex-col gap-0.5">
     <%= render Educhain::Navigation::Item::Component.with_collection(items, fullpath: request.fullpath) %>
   </ul>
+
+  <div class="mt-auto">
+    <%= render Educhain::Navigation::Account::Component.new %>
+  </div>
 </nav>

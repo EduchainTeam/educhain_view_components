@@ -1,0 +1,43 @@
+<details
+  data-controller="<%= stimulus_id %>"
+  class="relative w-full"
+  aria-label="<%= t('.account') %>"
+  data-action="keydown.escape-><%= stimulus_id %>#close"
+>
+  <summary
+    class="
+      flex gap-1.5
+      p-3 mt-2 rounded
+      font-semibold text-sm text-gray-500
+      hover:bg-gray-25 [[open]_>_&]:bg-gray-25
+      cursor-pointer
+    ">
+    <%= icon_tag(@user_icon, class: "inline-block align-text-bottom shrink-0 w-6 h-6 rounded-[4.81rem] font-normal text-sm fill-yellow bg-black") %>
+    <span class="overflow-hidden whitespace-nowrap text-ellipsis leading-6">
+      <%= @user_label %>
+    </span>
+  </summary>
+
+  <ul
+    class="
+      p-2 mb-1 absolute bottom-full left-0 w-full
+      font-normal text-sm text-black bg-white
+      border border-gray-100 rounded-lg
+      shadow-base
+    ">
+
+    <li class="h-8 flex items-center hover:bg-gray-25 rounded">
+      <%= link_to @account_path, class: 'flex gap-2 items-center px-2' do %>
+        <%= icon_tag("user-3-line", class: "w-5 h-5 fill-current shrink") %>
+        <span><%= t('.account') %></span>
+      <% end %>
+    </li>
+
+    <li class="h-8 flex items-center hover:bg-gray-25 rounded">
+      <%= button_to @logout_path, method: @logout_method, class: 'flex gap-2 items-center px-2' do %>
+        <%= icon_tag(@logout_icon, class: "w-5 h-5 fill-current shrink") %>
+        <span><%= t('.logout') %></span>
+      <% end %>
+    </li>
+  </ul>
+</details>
