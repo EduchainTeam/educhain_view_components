@@ -12,7 +12,7 @@
       hover:bg-gray-25 [[open]_>_&]:bg-gray-25
       cursor-pointer
     ">
-    <%= icon_tag(@user_icon, class: "inline-block align-text-bottom shrink-0 w-6 h-6 rounded-[4.81rem] font-normal text-sm fill-yellow bg-black") %>
+    <%= icon_tag("user-smile-fill", class: "inline-block align-text-bottom shrink-0 w-6 h-6 rounded-[4.81rem] font-normal text-sm fill-yellow bg-black") %>
     <span class="overflow-hidden whitespace-nowrap text-ellipsis leading-6">
       <%= @user_label %>
     </span>
@@ -35,7 +35,7 @@
 
     <li class="h-8 flex items-center hover:bg-gray-25 rounded">
       <%= button_to @logout_path, method: @logout_method, class: 'flex gap-2 items-center px-2' do %>
-        <%= icon_tag(@logout_icon, class: "w-5 h-5 fill-current shrink") %>
+        <%= icon_tag("logout-box-line", class: "w-5 h-5 fill-current shrink") %>
         <span><%= t('.logout') %></span>
       <% end %>
     </li>

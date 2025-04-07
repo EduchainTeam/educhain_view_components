@@ -13,6 +13,11 @@
   </ul>
 
   <div class="mt-auto">
-    <%= render Educhain::Navigation::Account::Component.new %>
+    <%= render Educhain::Navigation::Account::Component.new(
+      user_label: "email@example.com",
+      account_path: "#",
+      logout_path: "#",
+      logout_method: :delete,
+    ) %>
   </div>
 </nav>
