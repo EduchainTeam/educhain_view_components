@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const plugin = require('tailwindcss/plugin')
 module.exports = {
   content: [
     './public/*.html',
@@ -30,7 +31,6 @@ module.exports = {
         current: "currentColor",
 
         // Primary palette
-        "solidus-red": "#ef3023",
         black: "#222222",
         graphite: "#c7ccc7",
         "graphite-light": "#d8dad8",
@@ -101,5 +101,30 @@ module.exports = {
     require('@tailwindcss/forms'),   
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
+    plugin(({ addVariant, addBase, addComponents, theme }) => {
+      // Support the "hidden" attribute
+      addVariant("hidden", "&([hidden])")
+      addVariant("visible", "&:not([hidden])")
+
+      // Support the "search-cancel" pseudo-element
+      addVariant("search-cancel", "&::-webkit-search-cancel-button")
+
+      // Reset the <summary> marker
+      addBase({
+        "summary::-webkit-details-marker": { display: "none" },
+        "summary::marker": { display: "none" },
+        summary: { listStyle: "none" },
+      })
+
+      // Add a text style for links
+      addComponents({
+        ".body-link": {
+          color: theme("colors.blue"),
+          "&:hover": {
+            textDecoration: "underline",
+          },
+        },
+      })
+    }),
   ]
 }

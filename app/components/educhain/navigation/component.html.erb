@@ -1,0 +1,23 @@
+<nav class="
+  flex flex-col
+  bg-gray-15
+  p-4
+  w-full
+">
+  <%= link_to "#", class: "py-3 px-2 text-left flex mb-4" do %>
+    <%= image_tag @logo_path, alt: t('.visit_store'), class: "max-h-7" %>
+  <% end %>
+
+  <ul class="flex flex-col gap-0.5">
+    <%= render Educhain::Navigation::Item::Component.with_collection(items, fullpath: request.fullpath) %>
+  </ul>
+
+  <div class="mt-auto">
+    <%= render Educhain::Navigation::Account::Component.new(
+      user_label: "email@example.com",
+      account_path: "#",
+      logout_path: "#",
+      logout_method: :delete,
+    ) %>
+  </div>
+</nav>

@@ -1,6 +1,11 @@
 pin "@hotwired/stimulus", to: "stimulus.min.js"
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
+pin "stimulus-use", to: "https://ga.jspm.io/npm:stimulus-use@0.52.0/dist/index.js"
+
+pin "sortablejs", to: "https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/+esm"
+pin "@rails/request.js", to: "https://cdn.jsdelivr.net/npm/@rails/request.js@0.0.9/+esm"
 
 pin "educhain_view_components/application"
+pin "educhain_view_components/utils"
 pin_all_from Educhain::ViewComponents::Engine.root.join("app/javascript/educhain_view_components/controllers"), under: "educhain_view_components/controllers"
 pin_all_from Educhain::ViewComponents::Engine.root.join("app/components")
