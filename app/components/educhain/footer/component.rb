@@ -2,6 +2,7 @@
 
 class Educhain::Footer::Component < Educhain::BaseComponent
   renders_many :items, Educhain::Footer::Item::Component
+  renders_one :logo, Educhain::Footer::Logo::Component
 
   def initialize; end
 end

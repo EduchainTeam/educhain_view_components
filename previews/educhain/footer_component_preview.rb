@@ -75,7 +75,17 @@ class Educhain::FooterComponentPreview < ViewComponent::Preview
   ]
   Items = Struct.new(:width, :key, :links)
 
-  def overview()
-    render_with_template(locals: { items: ITEMS.map { Items.new(**_1) } })
+  def overview(
+    logo_path: "educhain/view_components/educhain_fat_type.svg",
+    width: "w-13/52",
+    text: "Проектные (техноэкономические) технологии и платформы кадрового суверенитета"
+  )
+    render_with_template(
+      locals: {
+        text:,
+        width:,
+        path: logo_path,
+        items: ITEMS.map { Items.new(**_1) } }
+    )
   end
 end
