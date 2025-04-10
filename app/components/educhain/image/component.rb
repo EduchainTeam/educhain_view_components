@@ -21,6 +21,16 @@ class Educhain::Image::Component < Educhain::BaseComponent
   end
 
   def call
-    tag.img(src: @src, alt: @alt, **@attrs)
+    tag.img(src: resolve_src(@src), alt: @alt, **@attrs)
+  end
+
+  private
+
+  def resolve_src(src)
+    if src.starts_with?("http://", "https://", "//")
+      src
+    else
+      ActionController::Base.helpers.image_path(src)
+    end
   end
 end

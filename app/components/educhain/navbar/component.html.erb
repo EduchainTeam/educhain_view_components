@@ -1,0 +1,55 @@
+<nav class="flex justify-between items-center gap-2.5 h-14 px-8 py-4 bg-gray-50" aria-label="Основная навигация">
+  <div class="flex items-center gap-8">
+    <!-- Menu -->
+    <button class="cursor-pointer select-none" aria-label="Открыть меню">
+      <%= icon_tag "menu-fill", class: "w-5 h-5" %>
+    </button>
+
+    <!-- Logo -->
+    <% if @brand_logo_url %>
+      <%= link_to "/", class: "flex justify-items-start items-center select-none" do %>
+        <%= image_tag(@brand_logo_url, alt: "Logo", class: "h-6 w-auto") %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <!-- Navbar Links -->
+  <% if @nav_links.any? %>
+    <ul class="hidden md:inline-flex justify-center gap-12">
+      <% @nav_links.each do |link| %>
+        <li>
+          <%= render Educhain::Link::Component.new(
+            text: link[:name], 
+            href: link[:href], 
+            scheme: :navbar
+          ) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <!-- User Section -->
+  <div class="flex items-center gap-4">
+    <% if @current_user %>
+      <%= link_to @profile_url, aria: { label: "Перейти в ваш профиль" } do %>
+        <% if @avatar_url %>
+          <%= render Educhain::Image::Component.new(
+            src: @avatar_url, 
+            alt: "Изображение профиля пользователя", 
+            class: "rounded-full w-9 h-9"
+          ) %>
+        <% else %>
+          <!-- Profile icon -->
+          <button class="flex justify-center items-center bg-gray-200 rounded-full w-9 h-9 cursor-pointer select-none" aria-label="Перейти в ваш профиль">
+            <%= icon_tag "user-3-line", class: "w-5 h-5" %>
+          </button>
+        <% end %>
+      <% end %>
+    <% else %>
+      <%= render Educhain::Button::Component.new(
+        text: "Войти", 
+        class: "px-6 bg-red-600 rounded-full"
+      ) %>
+    <% end %>
+  </div>
+</nav>
