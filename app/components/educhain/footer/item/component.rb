@@ -1,25 +1,19 @@
 # frozen_string_literal: true
 
 class Educhain::Footer::Item::Component < Educhain::BaseComponent
-  with_collection_parameter :item
-  # @param item [Educhain::Footer::Component::BlockItem]
-  def initialize(item:)
-    @item = item
+  Links = Struct.new(:name, :path)
+
+  def initialize(width:, key:, links:)
+    @width = width
+    @key = key
+    @links_hash = links
   end
 
-  def path
-    @item.path
-  end
-
-  def width
-    @item.width
-  end
-
-  def key
-    @item.key
-  end
+  private
 
   def links
-    @item.links
+    @links ||= @links_hash.map { Links.new(**_1) }
   end
+
+  attr_reader :width, :key
 end

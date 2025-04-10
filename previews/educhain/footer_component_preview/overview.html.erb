@@ -1,3 +1,11 @@
 <div class="container mx-auto mt-8">
-  <%= render Educhain::Footer::Component.new  %>
+  <%= render Educhain::Footer::Component.new do |footer|  %>
+    <% items.each do |item| %>
+      <% footer.with_item(
+           width: item.width,
+           key: item.key,
+           links: item.links
+         ) %>
+    <% end %>
+  <% end %>
 </div>
