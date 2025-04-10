@@ -1,0 +1,21 @@
+<footer>
+  <div class="pt-10 pb-8 px-6 mb-5 bg-footer_red-500 text-white">
+    <div class="flex mb-10">
+      <%= logo %>
+
+      <% items.each do |item| %>
+        <%= item %>
+      <% end %>
+
+    </div>
+    <div class="mt-6 pt-3 border-t">
+      <div class="flex">
+        <div class="w-33/52 text-smaller">
+          Copyright ©	2024 Educhain | All Right Reserved
+        </div>
+        <div class="w-10/52 text-footer_red-200 text-smaller"><%= link_to "Политика конфиденциальности", "#" %></div>
+        <div class="w-9/52 text-footer_red-200 text-smaller"><%= link_to "Пользовательское соглашение", "#" %></div>
+      </div>
+    </div>
+  </div>
+</footer>

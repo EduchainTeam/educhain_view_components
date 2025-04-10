@@ -11,8 +11,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        "13/52": "25%",
+        "9/52": "17.307692%",
+        "11/52": "21.153846%",
+        "12/52": "23.076923%",
+        "7/52": "13.461539%",
+        "33/52": "63.461538%",
+        "10/52": "19.230770%"
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        smaller: ['10px', '12px']
       },
       colors: {
         transparent: "transparent",
@@ -41,6 +53,12 @@ module.exports = {
 
         // Extra colors (not part of the original palette)
         "papaya-whip": "#f9e3d9",
+
+        // Color for footer
+        footer_red: {
+          200: "#fecaca",
+          500: "#ef4444"
+        },
 
         // UI Red
         red: {
