@@ -1,5 +1,5 @@
 <div class="container mx-auto mt-8">
-  <%= render Educhain::Footer::Component.new do |footer|  %>
+  <%= render Educhain::Footer::Component.new(copyright:) do |footer|  %>
     <%= footer.with_logo(width:, path:, text:) %>
     <% items.each do |item| %>
       <% footer.with_item(

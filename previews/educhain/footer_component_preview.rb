@@ -78,10 +78,12 @@ class Educhain::FooterComponentPreview < ViewComponent::Preview
   def overview(
     logo_path: "educhain/view_components/educhain_fat_type.svg",
     width: "w-13/52",
-    text: "Проектные (техноэкономические) технологии и платформы кадрового суверенитета"
+    text: "Проектные (техноэкономические) технологии и платформы кадрового суверенитета",
+    copyright: "Copyright ©	2024 Educhain | All Right Reserved"
   )
     render_with_template(
       locals: {
+        copyright:,
         text:,
         width:,
         path: logo_path,
