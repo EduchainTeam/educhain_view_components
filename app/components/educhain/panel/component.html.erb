@@ -15,12 +15,12 @@
   data-controller="<%= stimulus_id %>"
 >
   <% "# TODO need to add dropdown component" %>
-  <%# if menus? %>
-    <%#= render component('ui/dropdown').new(
+  <% if menus? %>
+    <%= render Educhain::Dropdown::Component.new(
       size: :s,
       class: "absolute top-0 right-0 m-6",
     ).with_content(safe_join(menus)) %>
-  <%# end %>
+  <% end %>
 
   <% if @title %>
     <%= render_section do %>
