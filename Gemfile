@@ -28,3 +28,5 @@ gem "byebug", group: :development
 group :test do
   gem "capybara"
 end
+
+gem "geared_pagination", "~> 1.2"

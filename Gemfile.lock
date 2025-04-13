@@ -107,6 +107,9 @@ GEM
     date (3.4.1)
     drb (2.2.1)
     erubi (1.13.1)
+    geared_pagination (1.2.0)
+      activesupport (>= 5.0)
+      addressable (>= 2.5.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     htmlbeautifier (1.4.3)
@@ -300,6 +303,7 @@ DEPENDENCIES
   byebug
   capybara
   educhain_view_components!
+  geared_pagination (~> 1.2)
   importmap-rails (~> 1.2, >= 1.2.1)
   lookbook
   puma
