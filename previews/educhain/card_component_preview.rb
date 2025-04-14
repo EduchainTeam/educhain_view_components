@@ -5,28 +5,21 @@ class Educhain::CardComponentPreview < ViewComponent::Preview
     render(Educhain::Card::Component.new.with_content("My example"))
   end
 
-  # @label An example of card with icon_text content (event time)
-  def icon_text_event_time(
-    icon_name: "time-line",
-    text: "Начало: 12 апреля Конец: 12 мая"
-  )
-    render_with_template(
-      locals: {
-        icon_name:,
-        text:
-      }
-    )
-  end
-
-  # @label An example of card with icon_text content (address)
-  def icon_text_address(
+  # @label An example of card with address content
+  def address(
     icon_name: "map-pin-line",
-    text: "Москва, Проспект Длинного названия, дом 12, корпус 2"
+    address: {
+      city_with_type: "г. Москва",
+      street_with_type: "Проспект Длинного названия",
+      house_with_type: "дом 12",
+      block_with_type: "корпус 2",
+      flat_with_type: "аудитория 23"
+    }
   )
     render_with_template(
       locals: {
         icon_name:,
-        text:
+        address:
       }
     )
   end
