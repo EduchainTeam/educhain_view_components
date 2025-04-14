@@ -2,8 +2,8 @@
 
 class Educhain::Card::Component < Educhain::BaseComponent
   SCHEMES = {
-    primary: "bg-card_gray-200 p-5 py-3.5 text-card_gray-600 rounded-2xl",
-    secondary: "bg-card_gray-100 p-5 py-3.5 text-card_gray-600 rounded-2xl ",
+    primary: "bg-card_gray-200 p-4 py-3.5 text-card_gray-600 rounded-2xl",
+    secondary: "bg-card_gray-100 p-4 py-3.5 text-card_gray-600 rounded-2xl ",
   }.freeze
 
   def initialize(scheme: :primary, **attributes)
