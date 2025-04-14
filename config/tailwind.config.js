@@ -60,6 +60,13 @@ module.exports = {
           500: "#ef4444"
         },
 
+        //Color for card
+        card_gray: {
+          100: "#f3f4f6",
+          200: "#e5e7eb",
+          600: "#4b5563"
+        },
+
         // UI Red
         red: {
           100: "#f8d6d3",
