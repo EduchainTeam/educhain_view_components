@@ -1,0 +1,5 @@
+<div class="w-[632px] h-[360px] m-10">
+  <%= render Educhain::Card::Component.new(class: "h-full overflow-auto") do %>
+    <%= render Educhain::Card::AboutProgram::Component.new(tags:, title:, text: ) %>
+  <% end %>
+</div>
