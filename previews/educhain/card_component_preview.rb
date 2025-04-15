@@ -23,4 +23,18 @@ class Educhain::CardComponentPreview < ViewComponent::Preview
       }
     )
   end
+  # @label An example of card with date_event content
+  def date_event(
+    icon_name: "time-line",
+    start: Date.new(2025, 04, 12),
+    finish: Date.new(2025, 05, 12)
+  )
+    render_with_template(
+      locals: {
+        icon_name:,
+        start:,
+        finish:
+      }
+    )
+  end
 end

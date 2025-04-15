@@ -1,0 +1,7 @@
+<div class="<%= @attributes[:class]%>">
+  <%= render Educhain::Icon::Component.new(name: @icon_name, class: "flex-none fill-current m-1", width: 26.5, height: 26.5) %>
+  <div class="ml-2 mr-6">
+    <div>Начало: <%= day_month(@start) %></div>
+    <div>Конец: <%= day_month(@finish) %></div>
+  </div>
+</div>

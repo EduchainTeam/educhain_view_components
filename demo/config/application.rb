@@ -27,5 +27,6 @@ module Demo
     # config.eager_load_paths << Rails.root.join("extras")
 
     config.lookbook.project_name = "Educhain ViewComponents"
+    config.i18n.default_locale = :ru
   end
 end

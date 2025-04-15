@@ -1,9 +1,8 @@
-class Educhain::Card::Address::Component < ViewComponent::Base
-  ADDRESS_KEY = [ :city_with_type, :street_with_type, :house_with_type, :block_with_type, :flat_with_type ]
-
-  def initialize(icon_name:, address:, **attributes)
+class Educhain::Card::DateEvent::Component < ViewComponent::Base
+  def initialize(icon_name:, start:, finish:,  **attributes)
     @icon_name = icon_name
-    @address_hash = address
+    @start = start
+    @finish = finish
     @attributes = attributes
     @attributes[:class] = [
       "flex text-sm items-center",
@@ -15,5 +14,9 @@ class Educhain::Card::Address::Component < ViewComponent::Base
 
   def address
     @address ||= ADDRESS_KEY.map { |key| @address_hash[key] }.compact.join(", ")
+  end
+
+  def day_month(date)
+    I18n.l(date, format: :day_month)
   end
 end
