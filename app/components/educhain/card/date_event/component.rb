@@ -12,10 +12,6 @@ class Educhain::Card::DateEvent::Component < ViewComponent::Base
 
   private
 
-  def address
-    @address ||= ADDRESS_KEY.map { |key| @address_hash[key] }.compact.join(", ")
-  end
-
   def day_month(date)
     I18n.l(date, format: :day_month)
   end
