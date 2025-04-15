@@ -1,0 +1,5 @@
+<div class="w-[386px] m-10">
+  <%= render Educhain::Card::Component.new do %>
+    <%= render Educhain::Card::Address::Component.new(icon_name:, address:) %>
+  <% end %>
+</div>
