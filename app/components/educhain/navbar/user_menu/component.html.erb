@@ -1,0 +1,49 @@
+<details <%= tag.attributes @attrs %> >
+  <summary
+    class="text-black cursor-pointer flex items-center"
+    title="Меню пользователя"
+    data-action="keydown.esc-><%= stimulus_id %>#close"
+  >
+    <% if @avatar_url %>
+      <!-- Profile photo-->
+      <%= render Educhain::Image::Component.new(
+        src: @avatar_url, 
+        alt: 'Изображение профиля пользователя', 
+        class: "rounded-full w-9 h-9"
+      ) %>
+    <% else %>
+      <!-- Profile icon -->
+      <span class="flex justify-center items-center bg-gray-200 rounded-full w-9 h-9 cursor-pointer select-none" aria-label="Перейти в ваш профиль">
+        <%= icon_tag "user-3-line", class: "w-5 h-5" %>
+      </span>
+    <% end %>
+  </summary>
+
+  <div class="absolute mt-2.5 p-3 flex flex-col gap-1.5 min-w-[15rem] rounded-sm border border-gray-100 bg-gray-50 z-10 right-0">
+    <div class="flex justify-center pb-2">
+      <% if @avatar_url %>
+        <!-- Profile photo-->
+        <%= render Educhain::Image::Component.new(
+          src: @avatar_url, 
+          alt: 'Изображение профиля пользователя', 
+          class: "rounded-full w-16 h-16"
+        ) %>
+      <% else %>
+        <!-- Profile icon -->
+        <span class="flex justify-center items-center bg-gray-200 rounded-full w-16 h-16 cursor-pointer select-none" aria-label="Перейти в ваш профиль">
+          <%= icon_tag "user-3-line", class: "w-10 h-10" %>
+        </span>
+      <% end %>
+    </div>
+    <!-- Links for the menu -->
+    <% items.each do |item| %>
+      <% if item.button %>
+        <%= link_to item.href do %>
+          <%= render Educhain::Button::Component.new(text: item.label, scheme: :danger, class: "w-full") %>
+        <% end %>
+      <% else %>
+        <%= link_to item.label, item.href, class: "p-2 rounded-sm hover:bg-gray-100 text-black" %>
+      <% end %>
+    <% end %>
+  </div>
+</details>
