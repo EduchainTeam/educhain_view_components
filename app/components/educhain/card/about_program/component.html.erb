@@ -1,0 +1,13 @@
+<div class="<%= @attributes[:class]%>">
+  <div class="flex flex-row flex-wrap gap-2.5 mx-3.5">
+    <% @tags.each do |tag|%>
+      <div><%= render Educhain::Badge::Component.new(name: tag, size: :s, color: :gray, size: :ms) %></div>
+    <% end %>
+  </div>
+  <div class="mt-2.5 ml-3.5 pl-px text-base font-semibold text-card_gray-700">
+    <%= @title %>
+  </div>
+  <div class="my-3 ml-3.5 mr-[170px] text-sm leading-5 font-medium text-card_gray-700">
+    <%= @text %>
+  </div>
+</div>

@@ -7,10 +7,12 @@ class Educhain::Badge::Component < Educhain::BaseComponent
     green: "text-forest bg-seafoam",
     blue: "text-blue bg-sky",
     black: "text-white bg-black",
-    yellow: "text-orange bg-papaya-whip"
+    yellow: "text-orange bg-papaya-whip",
+    gray: "text-card_gray-500 bg-card_gray-200 border border-card_gray-400",
   }.freeze
 
   SIZES = {
+    ms: "px-3 py-[3px] text-xs font-normal",
     s: "px-2 py-0.5 text-xs font-semibold",
     m: "px-3 py-0.5 text-sm font-semibold",
     l: "px-3 py-0.5 text-base font-semibold"

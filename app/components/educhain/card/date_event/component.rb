@@ -13,6 +13,6 @@ class Educhain::Card::DateEvent::Component < ViewComponent::Base
   private
 
   def day_month(date)
-    I18n.l(date, format: :day_month)
+    I18n.l(date, format: "%e %B")
   end
 end
