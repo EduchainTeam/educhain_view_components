@@ -1,6 +1,19 @@
 # frozen_string_literal: true
 
 class Educhain::NavbarComponentPreview < ViewComponent::Preview
+  CUSTOM_ITEMS = [
+    { 
+      key: "профиль",
+      position: 0,
+      route: "#" 
+    }, 
+    {  
+      key: "выйти",
+      position: 1,
+      route: "#",
+      button: true
+    }
+  ]
 
   def overview
     render Educhain::Navbar::Component.new(
@@ -23,7 +36,7 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
       current_user: user,
       profile_url: "#",
       nav_links: default_nav_links,
-      menu_links: default_menu_links
+      menu_items: CUSTOM_ITEMS
     )
   end
 
@@ -48,9 +61,5 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
   # Returns an array of default navigation links for the navbar component.
   def default_nav_links
     [{ name: "Каталог", href: "#" }, { name: "Контакты", href: "#" }, { name: "О нас", href: "#" }]
-  end
-
-  def default_menu_links
-    [{ label: "Профиль", href: "#" }, { label: "Выйти", href: "#", button: true }]
   end
 end

@@ -36,14 +36,9 @@
       <% end %>
     </div>
     <!-- Links for the menu -->
-    <% items.each do |item| %>
-      <% if item.button %>
-        <%= link_to item.href do %>
-          <%= render Educhain::Button::Component.new(text: item.label, scheme: :danger, class: "w-full") %>
-        <% end %>
-      <% else %>
-        <%= link_to item.label, item.href, class: "p-2 rounded-sm hover:bg-gray-100 text-black" %>
-      <% end %>
-    <% end %>
+    <ul class="flex flex-col gap-0.5">
+      <%= render Educhain::Navbar::Item::Component.with_collection(items, fullpath: request.fullpath) %>
+    </ul>
+
   </div>
 </details>
