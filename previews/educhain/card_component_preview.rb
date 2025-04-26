@@ -5,6 +5,20 @@ class Educhain::CardComponentPreview < ViewComponent::Preview
     render(Educhain::Card::Component.new.with_content("My example"))
   end
 
+  def course
+    render Educhain::Card::Course::Component.new( 
+      course: {
+        article: "likey-РП-ПК-03", 
+        form_education: "Очно-заочная", 
+        document: "Удостоверение",
+        duration: 72, 
+        price: 10000
+      },
+      cart_url: "#", 
+      favorite_url: "#"
+    )
+  end
+
   # @label An example of card with address content
   def address(
     icon_name: "map-pin-line",

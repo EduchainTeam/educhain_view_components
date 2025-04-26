@@ -1,0 +1,35 @@
+<div class="<%= @attrs[:class]%>">
+  <%= render Educhain::Card::Component.new(scheme: "secondary", class: "flex flex-col gap-7 min-w-[350px] px-10 py-6") do %>
+    <!-- Список характерискик -->
+    <dl class="flex flex-col">
+      <% [
+        { label: "Артикул", value: @course[:article] },
+        { label: "Форма обучения", value: @course[:form_education] },
+        { label: "Документ", value: @course[:document] },
+        { label: "Продолжительность", value: "#{@course[:duration]} часа" }
+      ].each do |item| %>
+        <div class="flex flex-col py-3 border-b border-gray-300">
+          <dt class="text-md text-gray-600 font-medium"><%= item[:label] %></dt>
+          <dd class="text-lg text-gray-900 font-semibold"><%= item[:value] %></dd>
+        </div>
+      <% end %>
+    </dl>
+
+    <!-- Цена курса -->
+    <h1 class="text-3xl text-gray-900 font-bold tracking-wide">
+      <%= number_to_currency(@course[:price], unit: "₽", precision: 0, format: "%n %u", delimiter: " ") %>
+    </h1>
+
+    <div class="flex flex-row justify-between gap-4">
+      <!-- Кнопка "Добавить в корзину" -->
+      <%= link_to @cart_url do %>
+        <%= render Educhain::Button::Component.new(text: "Добавить в корзину", class: "flex-1 h-14 text-lg bg-red-500 rounded-3xl") %>
+      <% end %>
+
+      <!-- Иконка "Добавить в избранное" -->
+      <%= link_to @favorite_url, class: "flex justify-center items-center bg-gray-100 rounded-3xl size-14 cursor-pointer select-none" do %>
+        <%= icon_tag "heart-line", class: "fill-red-500 size-8" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
