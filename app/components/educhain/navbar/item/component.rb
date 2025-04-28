@@ -1,22 +1,18 @@
 # frozen_string_literal: true
 
 class Educhain::Navbar::Item::Component < Educhain::BaseComponent
-  with_collection_parameter :item
-  
-  def initialize(item:, fullpath: "#")
-    @item = item
-    @fullpath = fullpath
+  def initialize(position:, type: :link, text:, href: nil)
+    @position = position
+    @type = type
+    @text = text
+    @href = href
   end
 
-  def path
-    @item.path
+  def link?
+    @type == "link"
   end
 
-  def active?
-    @item.active?(@fullpath)
+  def button?
+    @type == "button"
   end
-
-  def fullpath
-    @fullpath
-  end
-end  
+end

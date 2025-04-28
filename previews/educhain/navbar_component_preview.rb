@@ -3,15 +3,28 @@
 class Educhain::NavbarComponentPreview < ViewComponent::Preview
   CUSTOM_ITEMS = [
     { 
-      key: "профиль",
       position: 0,
-      route: "#" 
-    }, 
-    {  
-      key: "выйти",
+      type: "link",
+      text: "Профиль",
+      href: "#" 
+    },
+    { 
+      position: 2,
+      type: "link",
+      text: "Помощь",
+      href: "#" 
+    },
+    {
       position: 1,
-      route: "#",
-      button: true
+      type: "link",
+      text: "Настройки",
+      href: "#" 
+    },
+    {  
+      position: 99,
+      type: "button",
+      text: "Выйти",
+      href: "#"
     }
   ]
 
@@ -21,6 +34,23 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
       current_user: nil, 
       profile_url: "#",
       nav_links: default_nav_links
+    )
+  end
+
+  def navbar_item
+    render Educhain::Navbar::Item::Component.new(
+      position: 0,
+      type: "link",
+      text: "hello",
+      href: "#"
+    )
+  end
+
+  def user_menu
+    render Educhain::Navbar::UserMenu::Component.new(
+      name: "Andrey",
+      avatar_url: "educhain/view_components/test-avatar.png",
+      items: CUSTOM_ITEMS
     )
   end
 

@@ -1,18 +1,5 @@
-<li class="<%= 'active' if active? %>">
-  <a
-    href="<%= path %>"
-    aria-current="<%= active? ? 'page' : 'false' %>"
-    class="
-      block px-3 py-2 rounded
-      hover:text-red-500 hover:bg-gray-100
-      <%= 'text-red-600 bg-gray-100 font-semibold' if active? %>
-    "
-  >
-    <% if @item.icon %>
-      <i class="inline-block w-4 h-4 mr-2 align-middle">
-        <%= icon_tag(@item.icon, class: "w-full h-full fill-current") %>
-      </i>
-    <% end %>
-    <%= @item.name %>
-  </a>
-</li>
+<% if link? %>
+  <%= link_to(@text, @href, class: "text-lg") %>
+<% elsif button? %>
+  <%= render Educhain::Button::Component.new(text: @text, class: "w-full") %>
+<% end %>
