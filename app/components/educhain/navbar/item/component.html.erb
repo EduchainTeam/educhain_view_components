@@ -1,0 +1,5 @@
+<% if link? %>
+  <%= render Educhain::Link::Component.new(text: @text, href: @href, scheme: :navbar, class: "text-lg") %>
+<% elsif button? %>
+  <%= render Educhain::Button::Component.new(text: @text, class: "w-full") %>
+<% end %>

@@ -1,0 +1,12 @@
+en:
+  "sign_in": "Sign in"
+
+  "aria_label":
+    "navbar": "Main navigation"
+    "menu": "Open menu"
+    "profile": "Open your profile"
+
+  "alt":
+    "home": "Home"
+    "logo": "Company Logo"
+    "profile_image": "User profile image"

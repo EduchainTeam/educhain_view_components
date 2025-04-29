@@ -1,0 +1,52 @@
+<!-- NavbarComponent -->
+<section>
+  <%= render Educhain::Navbar::Component.new(
+    brand_logo_url: "educhain/view_components/logo.svg", 
+    current_user: nil, 
+    profile_url: "#",
+    nav_links: Educhain::NavbarComponentPreview::PREVIEW_NAV_LINKS
+  ) %>
+</section>
+
+<div class="flex flex-row gap-40 pt-16 px-6">
+  <!-- ItemsComponent -->
+  <section class="flex flex-col gap-4">
+    <h2 class="pb-2 font-medium text-xl border-b">ItemsComponent</h2>
+
+    <div class="flex flex-col gap-1">
+      <%= render Educhain::Navbar::Item::Component.new(
+        position: 0,
+        type: "link",
+        text: "hello",
+        href: "#"
+      ) %>
+
+      <p class="text-xs text-gray-700 leading-none my-1">
+        type: :link
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <%= render Educhain::Navbar::Item::Component.new(
+        position: 0,
+        type: "button",
+        text: "hello",
+        href: "#"
+      ) %>
+
+      <p class="text-xs text-gray-700 leading-none">
+        type: :button
+      </p>
+    </div>
+  </section>
+
+  <!-- UserMenuComponent -->
+  <section class="flex flex-col gap-4">
+    <h2 class="pb-2 font-medium text-xl border-b">UserMenuComponent</h2>
+
+    <%= render Educhain::Navbar::UserMenu::Component.new(
+      name: "Andrey",
+      items: Educhain::NavbarComponentPreview::PREVIEW_ITEMS
+    ) %>
+  </section>
+</div>
