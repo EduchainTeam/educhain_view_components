@@ -10,9 +10,13 @@ class Educhain::Navbar::UserMenu::Component < Educhain::BaseComponent
     @attrs[:"data-controller"] = [stimulus_id, attrs[:"data-controller"]].compact.join(" ")
     @attrs[:"data-action"] = [
       "turbo:before-cache@window->#{stimulus_id}#close",
+      "mouseleave->#{stimulus_id}#mouseLeave",
+      "mouseenter->#{stimulus_id}#mouseEnter",
       attrs[:"data-action"]
     ].compact.join(" ")
   end
+
+  private
 
   def items
     @items.sort_by { |item| item[:position] }

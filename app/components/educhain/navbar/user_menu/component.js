@@ -1,16 +1,14 @@
 import { Controller } from "@hotwired/stimulus"
-import { useClickOutside } from "stimulus-use"
 
 export default class extends Controller {
-  connect() {
-    useClickOutside(this)
+  mouseEnter() {
+    clearTimeout(this.hoverTimeout)
+    this.element.setAttribute("open", true)
   }
 
-  clickOutside() {
-    this.close()
-  }
-
-  close() {
-    this.element.removeAttribute("open")
+  mouseLeave() {
+    this.hoverTimeout = setTimeout(() => {
+      this.element.removeAttribute("open")
+    }, 200)
   }
 }
