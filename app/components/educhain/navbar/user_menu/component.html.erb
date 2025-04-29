@@ -19,8 +19,8 @@
     <% end %>
   </summary>
 
-  <div class="absolute mt-2.5 p-3 flex flex-col gap-2 min-w-[15rem] rounded-xl border border-gray-100 bg-gray-50 z-10 right-0">
-    <div class="flex flex-col gap-2 justify-center items-center pb-2 bo">
+  <div class="absolute w-[15rem] mt-2.5 p-3 border rounded-lg border-gray-100 bg-gray-50 z-10 right-0">
+    <div class="flex flex-col gap-2 justify-center items-center pb-4">
       <% if @avatar_url %>
         <!-- Profile photo-->
         <%= render Educhain::Image::Component.new(
@@ -36,10 +36,11 @@
       <% end %>
 
       <!-- Username-->
-      <h1 class="text-2xl font-medium">
+      <h1 class="text-2xl text-center font-medium w-full truncate">
         <%= @name %>
       </h1>
     </div>
+    
     <!-- Links and Buttons for the menu -->
     <ul class="flex flex-col w-full gap-0.5">
       <% items.each do |item| %>

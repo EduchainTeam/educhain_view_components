@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Educhain::NavbarComponentPreview < ViewComponent::Preview
-  CUSTOM_ITEMS = [
+  PREVIEW_ITEMS = [
     { 
       position: 0,
       type: "link",
@@ -28,29 +28,26 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
     }
   ]
 
+  PREVIEW_NAV_LINKS = [
+    { name: "Каталог", href: "#" }, 
+    { name: "Контакты", href: "#" }, 
+    { name: "О нас", href: "#" }
+  ]
+
   def overview
+    render_with_template
+  end
+
+  def without_user
     render Educhain::Navbar::Component.new(
       brand_logo_url: "educhain/view_components/logo.svg", 
       current_user: nil, 
       profile_url: "#",
-      nav_links: default_nav_links
-    )
-  end
-
-  def navbar_item
-    render Educhain::Navbar::Item::Component.new(
-      position: 0,
-      type: "link",
-      text: "hello",
-      href: "#"
-    )
-  end
-
-  def user_menu
-    render Educhain::Navbar::UserMenu::Component.new(
-      name: "Andrey",
-      avatar_url: "educhain/view_components/test-avatar.png",
-      items: CUSTOM_ITEMS
+      nav_links: [
+        { name: "Каталог", href: "#" }, 
+        { name: "Контакты", href: "#" }, 
+        { name: "О нас", href: "#" }
+      ]
     )
   end
 
@@ -65,8 +62,8 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
       brand_logo_url: "educhain/view_components/logo.svg", 
       current_user: user,
       profile_url: "#",
-      nav_links: default_nav_links,
-      menu_items: CUSTOM_ITEMS
+      nav_links: PREVIEW_NAV_LINKS,
+      menu_items: PREVIEW_ITEMS
     )
   end
 
@@ -82,14 +79,8 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
     render Educhain::Navbar::Component.new(
       brand_logo_url: "educhain/view_components/logo.svg",
       current_user: user,
-      nav_links: default_nav_links
+      nav_links: PREVIEW_NAV_LINKS,
+      menu_items: PREVIEW_ITEMS
     )
-  end
-
-  private
-
-  # Returns an array of default navigation links for the navbar component.
-  def default_nav_links
-    [{ name: "Каталог", href: "#" }, { name: "Контакты", href: "#" }, { name: "О нас", href: "#" }]
   end
 end

@@ -8,6 +8,8 @@ class Educhain::Navbar::Item::Component < Educhain::BaseComponent
     @href = href
   end
 
+  private
+
   def link?
     @type == "link"
   end

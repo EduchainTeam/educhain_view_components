@@ -9,6 +9,7 @@ class Educhain::Link::Component < Educhain::BaseComponent
       text-gray-600
       text-md font-normal
       text-nowrap
+      hover:text-gray-800
     }
   }.freeze
 
@@ -24,6 +25,6 @@ class Educhain::Link::Component < Educhain::BaseComponent
   end
 
   def call
-    content_tag(:a, @text, href: @href, **@attrs)
+    link_to @text, @href, **@attrs
   end
 end
