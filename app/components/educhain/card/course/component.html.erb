@@ -1,0 +1,27 @@
+<div class="<%= @attrs[:class]%>">
+  <%= render Educhain::Card::Component.new(scheme: "secondary", class: "flex flex-col gap-7 min-w-[350px] px-9 py-9") do %>
+    <!-- Список характерискик -->
+    <dl class="flex flex-col">
+      <% @items.each do |item| %>
+        <%= render Educhain::Card::Course::Item::Component.new(label: item[:label], value: item[:value]) %>
+      <% end %>
+    </dl>
+
+    <!-- Цена курса -->
+    <h1 class="text-3xl text-gray-900 font-bold tracking-wide">
+      <%= number_to_currency(@price, unit: "₽", precision: 0, format: "%n %u", delimiter: " ") %>
+    </h1>
+
+    <div class="flex flex-row justify-between gap-4">
+      <!-- Кнопка "Добавить в корзину" -->
+      <%= link_to @cart_url do %>
+        <%= render Educhain::Button::Component.new(text: "Добавить в корзину", size: "l", class: "flex-1 text-lg bg-red-500 rounded-3xl") %>
+      <% end %>
+
+      <!-- Иконка "Добавить в избранное" -->
+      <%= link_to @favorite_url, class: "flex justify-center items-center bg-gray-100 rounded-3xl size-12 cursor-pointer select-none" do %>
+        <%= icon_tag "heart-line", class: "fill-red-500 size-8" %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
