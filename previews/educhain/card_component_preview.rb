@@ -6,14 +6,14 @@ class Educhain::CardComponentPreview < ViewComponent::Preview
   end
 
   def course
-    render Educhain::Card::Course::Component.new( 
-      course: {
-        article: "likey-РП-ПК-03", 
-        form_education: "Очно-заочная", 
-        document: "Удостоверение",
-        duration: 72, 
-        price: 10000
-      },
+    render Educhain::Card::Course::Component.new(
+      items: [
+        {label: "Артикул", value: "likey-РП-ПК-03"},
+        {label: "Форма обучения", value: "Очно-заочная"},
+        {label: "Документ", value: "Удостоверение"},
+        {label: "Продолжительность", value: "72 часа"}
+      ],
+      price: 10000,
       cart_url: "#", 
       favorite_url: "#"
     )
