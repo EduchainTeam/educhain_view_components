@@ -10,7 +10,7 @@ class Educhain::Navbar::Component < Educhain::BaseComponent
     @attrs = attrs
     @attrs[:class] = [
       "flex justify-between items-center gap-2.5 h-14 px-8 py-4 bg-gray-50",
-      @attributes[:class]
+      @attrs[:class]
     ].join(" ")
   end
 end
