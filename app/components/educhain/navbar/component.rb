@@ -8,5 +8,9 @@ class Educhain::Navbar::Component < Educhain::BaseComponent
     @nav_links = nav_links
     @menu_items = menu_items
     @attrs = attrs
+    @attrs[:class] = [
+      "flex justify-between items-center gap-2.5 h-14 px-8 py-4 bg-gray-50",
+      @attributes[:class]
+    ].join(" ")
   end
 end
