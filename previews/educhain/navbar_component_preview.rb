@@ -53,7 +53,7 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
 
   def with_user_without_avatar
     user = { 
-      name: "Andrey", 
+      email: "andrey@educhain.com",
       avatar_url: nil,
       profile_url: "#"
     }
@@ -69,7 +69,7 @@ class Educhain::NavbarComponentPreview < ViewComponent::Preview
 
   def with_user_with_avatar
     user = {
-      name: "Andrey",
+      email: "andrey@educhain.com",
       avatar_url: "educhain/view_components/test-avatar.png",
       profile_url: "#",
       settings_url: "#",
