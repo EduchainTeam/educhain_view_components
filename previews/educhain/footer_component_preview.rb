@@ -86,9 +86,7 @@ class Educhain::FooterComponentPreview < ViewComponent::Preview
         copyright:,
         text:,
         width:,
-        path: logo_path,
-        # items: ITEMS.map { Items.new(**_1) } }
-        items: Educhain::ViewComponents::Configuration.new.footer_items
+        path: logo_path
       }
     )
   end
