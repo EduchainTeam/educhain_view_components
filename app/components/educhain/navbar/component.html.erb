@@ -41,7 +41,9 @@
       ) %>
     <% else %>
       <%= render Educhain::Button::Component.new(
-        text: "Войти", 
+        tag: :a,
+        text: "Войти",
+        href: @button_url,
         class: "px-6 bg-red-600 rounded-full"
       ) %>
     <% end %>
