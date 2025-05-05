@@ -35,13 +35,15 @@
   <div class="flex items-center gap-4">
     <% if @current_user %>
       <%= render Educhain::Navbar::UserMenu::Component.new(
-        name: @current_user[:name],
+        name: @current_user[:email],
         avatar_url: @current_user[:avatar_url],
         items: @menu_items
       ) %>
     <% else %>
       <%= render Educhain::Button::Component.new(
-        text: "Войти", 
+        tag: :a,
+        text: "Войти",
+        href: @button_url,
         class: "px-6 bg-red-600 rounded-full"
       ) %>
     <% end %>
