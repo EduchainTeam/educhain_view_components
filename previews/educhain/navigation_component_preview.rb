@@ -54,7 +54,7 @@ class Educhain::NavigationComponentPreview < ViewComponent::Preview
   # @label An example of custom logo and items
   def overview(
     logo_path: "educhain/view_components/logo/gml.svg",
-    user_label: :user_label
+    user_label: "admin@example.com"
   )
     render_with_template(locals: { logo_path:, user_label:, items: CUSTOM_ITEMS })
   end
