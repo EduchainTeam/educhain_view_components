@@ -5,7 +5,7 @@ class Educhain::Navigation::Component < Educhain::BaseComponent
     # :logo_path, :string, default: "logo/educhain.svg"
 
     logo_path: "educhain/view_components/logo/educhain.svg",
-
+    user_label: :user_label,
     # items: default items set in navigation
 
     items: [
@@ -44,6 +44,7 @@ class Educhain::Navigation::Component < Educhain::BaseComponent
     ]
   )
     @logo_path = logo_path
+    @user_label = user_label
     @items = items.map do |attrs|
       children = attrs[:children].to_a.map { MenuItem.new(**_1, top_level: false) }
       MenuItem.new(**attrs, children:, top_level: true)
