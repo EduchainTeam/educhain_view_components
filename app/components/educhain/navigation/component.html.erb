@@ -14,7 +14,7 @@
 
   <div class="mt-auto">
     <%= render Educhain::Navigation::Account::Component.new(
-      user_label: "email@example.com",
+      user_label: masked_user_label,
       account_path: "#",
       logout_path: "#",
       logout_method: :delete,

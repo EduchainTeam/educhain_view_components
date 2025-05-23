@@ -49,6 +49,10 @@ class Educhain::Navigation::Component < Educhain::BaseComponent
       children = attrs[:children].to_a.map { MenuItem.new(**_1, top_level: false) }
       MenuItem.new(**attrs, children:, top_level: true)
     end
+
+    def masked_user_label
+      helpers.current_user&.email
+    end
   end
 
   def items
