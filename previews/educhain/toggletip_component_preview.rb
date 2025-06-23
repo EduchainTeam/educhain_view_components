@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# @component "ui/toggletip"
+# @component "toggletip"
 class Educhain::ToggletipComponentPreview < ViewComponent::Preview
     def overview
       render_with_template
