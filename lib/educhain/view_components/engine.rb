@@ -1,4 +1,5 @@
 require "view_component"
+require "turbo-rails"
 require "view_component/version"
 require "importmap-rails"
 require_relative "components_registry"
