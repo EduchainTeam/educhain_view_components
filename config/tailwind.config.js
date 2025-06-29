@@ -43,6 +43,7 @@ module.exports = {
         blue: "#2554b1",
         moss: "#2d3925",
         forest: "#096756",
+        sazerac: "#fcf0dd",
         midnight: "#163449",
         pink: "#f6d7e2",
         plum: "#3a0e31",
@@ -105,10 +106,14 @@ module.exports = {
         sm: "0px 1px 2px 0px rgba(0, 0, 0, 0.04)",
         base: "0px 4px 8px 0px rgba(0, 0, 0, 0.08), 0px 2px 4px -1px rgba(0, 0, 0, 0.04)",
       },     
+      height: {
+        "5.5": "1.375rem",
+      }
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),   
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
     require('@tailwindcss/typography'),
     require('@tailwindcss/container-queries'),
     plugin(({ addVariant, addBase, addComponents, theme }) => {
