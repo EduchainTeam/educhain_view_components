@@ -1,0 +1,24 @@
+en:
+  no_resources_found: "No %{resources} found"
+  rows_selected: 'selected'
+  select_all: 'Select all'
+  select_row: 'Select row'
+  filter: 'Filter'
+  search_placeholder: 'Search all %{resources}'
+  action_confirmation: 'Are you sure you want to %{action} ${count} ${resource}?'
+  refine_search: 'Refine Search'
+  batch_actions: Batch actions
+  cancel: Cancel
+ru:
+  no_resources_found: "%{resources} не найдены"
+  rows_selected: 'выбраны'
+  select_all: 'Выбрать все'
+  select_row: 'Выбрать'
+  filter: 'Фильтровать'
+  search_placeholder: 'Искать все %{resources}'
+  action_confirmation: 'Вы уверены %{action} ${count} ${resource}?'
+  refine_search: 'Уточнить поиск'
+  batch_actions: Массовые операции
+  cancel: Отменить
+
+
