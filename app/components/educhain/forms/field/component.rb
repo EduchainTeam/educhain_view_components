@@ -32,9 +32,27 @@ class Educhain::Forms::Field::Component < Educhain::BaseComponent
       )
     end
   
+    def self.text_area(form, method, object: nil, hint: nil, tip: nil, size: :m, **attributes)
+      object_name, object, label, errors = extract_form_details(form, object, method)
+
+      new(
+        label:,
+        hint:,
+        tip:,
+        error: errors,
+        input_attributes: {
+          name: "#{object_name}[#{method}]",
+          size:,
+          tag: :textarea,
+          value: object.public_send(method),
+          error: (errors.to_sentence.capitalize if errors),
+          **attributes,
+        }
+      )
+    end
     def self.select(form, method, choices, object: nil, hint: nil, tip: nil, size: :m, **attributes)
       object_name, object, label, errors = extract_form_details(form, object, method)
-  
+
       new(
         label:,
         hint:,
@@ -51,10 +69,10 @@ class Educhain::Forms::Field::Component < Educhain::BaseComponent
         }
       )
     end
-  
+
     def self.text_area(form, method, object: nil, hint: nil, tip: nil, size: :m, **attributes)
       object_name, object, label, errors = extract_form_details(form, object, method)
-  
+
       new(
         label:,
         hint:,
@@ -70,10 +88,10 @@ class Educhain::Forms::Field::Component < Educhain::BaseComponent
         }
       )
     end
-  
+
     def self.toggle(form, method, object: nil, hint: nil, tip: nil, size: :m, **attributes)
       object_name, object, label, errors = extract_form_details(form, object, method)
-  
+
       new(
         label:,
         hint:,
@@ -89,7 +107,7 @@ class Educhain::Forms::Field::Component < Educhain::BaseComponent
         )
       )
     end
-  
+
     def self.extract_form_details(form, object, method)
       if form.is_a?(String)
         object_name = form
@@ -100,10 +118,10 @@ class Educhain::Forms::Field::Component < Educhain::BaseComponent
       else
         raise ArgumentError, "Invalid arguments: expected a form object or form.object_name and form.object"
       end
-  
+
       errors = object.errors.messages_for(method).presence if object.respond_to?(:errors)
       label = object.class.human_attribute_name(method)
-  
+
       [object_name, object, label, errors]
     end
-  end
+end
