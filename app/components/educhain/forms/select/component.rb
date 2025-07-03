@@ -64,7 +64,7 @@ class Educhain::Forms::Select::Component < Educhain::BaseComponent
     prepare_classes(size:)
 
     @attributes[:name] = name
-    @attributes[:is] = "solidus-select"
+    @attributes[:is] = "educhain-select"
     @attributes[:id] ||= "#{stimulus_id}_#{name}"
     @attributes[:"data-error-message"] = @error.presence
   end
