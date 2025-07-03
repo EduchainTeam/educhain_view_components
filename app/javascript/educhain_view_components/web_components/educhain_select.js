@@ -82,4 +82,4 @@ class EduchainSelect extends HTMLSelectElement {
   }
 }
 
-customElements.define("educhain-select", EduchainSelect, { extends: "select" });
+customElements.get("educhain-select") || customElements.define("educhain-select", EduchainSelect, { extends: "select" });

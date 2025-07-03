@@ -50,23 +50,20 @@ class Educhain::Forms::Field::Component < Educhain::BaseComponent
         }
       )
     end
+
     def self.select(form, method, choices, object: nil, hint: nil, tip: nil, size: :m, **attributes)
       object_name, object, label, errors = extract_form_details(form, object, method)
 
-      new(
+      Educhain::Forms::Select::Component.new(
         label:,
         hint:,
         tip:,
-        error: errors,
-        input_attributes: {
-          name: "#{object_name}[#{method}]",
-          tag: :select,
-          choices:,
-          size:,
-          value: (object.public_send(method) if object.respond_to?(method)),
-          error: (errors.to_sentence.capitalize if errors),
-          **attributes,
-        }
+        size: size,
+        name: "#{object_name}[#{method}]#{'[]' if attributes[:multiple].present?}",
+        choices:,
+        value: object.try(method),
+        error: (errors.to_sentence.capitalize if errors),
+        **attributes
       )
     end
 
